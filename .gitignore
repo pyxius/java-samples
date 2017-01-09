@@ -15,5 +15,5 @@ hs_err_pid*
 *.iml
 **/target
 **/*.log
-maven_settings.xml
+mvn_settings.xml
 
