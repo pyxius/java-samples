@@ -21,6 +21,10 @@ public class MyDateFormatter {
         logger.debug("Initialized with format {}", df.toPattern() );
     }
 
+    public MyDateFormatter(String dateFormatStr){
+        new MyDateFormatter(new SimpleDateFormat(dateFormatStr));
+    }
+
     public Date formatDate(String dateStr){
         Date date = null;
         try {

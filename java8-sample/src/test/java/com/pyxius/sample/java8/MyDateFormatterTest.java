@@ -5,14 +5,16 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import javax.swing.text.DateFormatter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import static org.junit.Assert.*;
 
 public class MyDateFormatterTest {
-
 
     private MyDateFormatter obj;
 
@@ -32,6 +34,12 @@ public class MyDateFormatterTest {
         String dateStr = "10/01/2016"; //correct input
         Date date = obj.formatDate(dateStr);
         assertNotNull(date);
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        assertEquals(10, cal.get(Calendar.DAY_OF_MONTH));
+        assertEquals(0, cal.get(Calendar.MONTH));
+        assertEquals(2016, cal.get(Calendar.YEAR));
+
     }
 
     @Test
