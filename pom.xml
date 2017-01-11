@@ -4,7 +4,7 @@
 
     <groupId>com.pyxius.sample</groupId>
     <artifactId>java-samples</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <modules>
         <module>jsoniter-sample</module>
         <module>java8-sample</module>
